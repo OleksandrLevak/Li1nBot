@@ -1,0 +1,19 @@
+{
+  "name": "telgram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.40.0",
+    "telegraf": "^3.34.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
