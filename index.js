@@ -32,6 +32,6 @@ bot.onText(/res/, function (msg) {
 
 bot.onText(/clear/, function (msg) {
     var fromId = msg.from.id; // Получаем ID отправителя
-    bot.deleteMessage(fromId, 0);
+    bot.deleteMessage(fromId, msg.message_id - 1);
 });
 
