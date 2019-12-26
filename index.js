@@ -35,6 +35,6 @@ bot.onText(/clear/, function (msg, match) {
     var resp = match[1];
     let pars = parseInt(resp);
     counter.push(pars);
-    bot.deleteMessage(fromId, msg.message_id - 1);
+    bot.deleteMessage(fromId, msg.message_id[0]);
 });
 
