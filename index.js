@@ -30,11 +30,8 @@ bot.onText(/res/, function (msg) {
     bot.sendMessage(fromId, 'Всього віджався: ' + result + '\n' + 'Залишилося: ' + mustdo);
 });
 
-bot.onText(/clear/, function (msg, match) {
+bot.onText(/clear/, function (msg) {
     var fromId = msg.from.id; // Получаем ID отправителя
-    var resp = match[1];
-    let pars = parseInt(resp);
-    counter.push(pars);
     bot.deleteMessage(fromId, msg.message_id[0]);
 });
 
