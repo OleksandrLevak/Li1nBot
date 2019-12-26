@@ -26,12 +26,7 @@ bot.onText(/res/, function (msg) {
         var result = counter.reduce(function(sum, current) {
             return sum + current
          });
-    let mustdo = 9000 - result;
-    bot.sendMessage(fromId, 'Всього віджався: ' + result + '\n' + 'Залишилося: ' + mustdo);
+    bot.sendMessage(fromId, 'Всього віджався: ' + result);
 });
 
-bot.onText(/clear/, function (msg) {
-    var fromId = msg.from.id; // Получаем ID отправителя
-    bot.deleteMessage(fromId, msg.message_id - 1);
-});
 
