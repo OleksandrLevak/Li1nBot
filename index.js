@@ -12,7 +12,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 var counter = [];
-// Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием, то есть "Hello World!")
+
 bot.onText(/(^[0-9]+)/, function (msg, match) {
     var fromId = msg.from.id; // Получаем ID отправителя
     var resp = match[1];
@@ -28,5 +28,13 @@ bot.onText(/res/, function (msg) {
          });
     let mustdo = 9000 - result;
     bot.sendMessage(fromId, 'Всього віджався: ' + result + '\n' + 'Залишилося: ' + mustdo);
+});
+
+bot.onText(/clear/, function (msg, match) {
+    var fromId = msg.from.id; // Получаем ID отправителя
+    var resp = match[1];
+    let pars = parseInt(resp);
+    counter.push(pars);
+    bot.deleteMessage(fromId, msg.message_id - 1);
 });
 
