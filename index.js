@@ -12,10 +12,22 @@ app.on('text', function (msg, match) {
   
    app.startPolling(); */
 
+
+  
+   
+
+
 var TelegramBot = require('node-telegram-bot-api');
 var token = '1013712671:AAF0AzZ0zGawEY6X11SkGfXU5C_S70ld6lI';
 
-var bot = new TelegramBot(token, { polling: true });
+const options = {
+    webHook: {
+        port: process.env.PORT
+    }
+};
+const bot = new TelegramBot(token, options);
+
+//var bot = new TelegramBot(token, { polling: true });
 
 var counter = [];
 // Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием, то есть "Hello World!")
