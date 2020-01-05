@@ -29,4 +29,10 @@ bot.onText(/res/, function (msg) {
     bot.sendMessage(fromId, 'Всього віджався: ' + result);
 });
 
+const time = 60000;
+const f = () => {
+  bot.sendMessage('Hello');
+}
+setInterval(f, time)
+
 
