@@ -26,9 +26,9 @@ bot.onText(/res/, function (msg) {
         var result = counter.reduce(function(sum, current) {
             return sum + current
          });
-    bot.sendMessage(fromId, 'Всього віджався: ' + result);
+         setTimeout(bot.sendMessage(fromId, 'Всього віджався: ' + result), 1000);
 });
 
-setInterval(bot.sendMessage('Всього віджався: ' + result), 1000);
+
 
 
