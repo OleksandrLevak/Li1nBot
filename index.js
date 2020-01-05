@@ -26,9 +26,14 @@ bot.onText(/res/, function (msg) {
         var result = counter.reduce(function(sum, current) {
             return sum + current
          });
-         setTimeout(bot.sendMessage(fromId, 'Всього віджався: ' + result), 1000);
+         bot.sendMessage(fromId, 'Всього віджався: ' + result);
 });
 
-
+bot.onText(/\/audio/, function onAudioText(msg) {
+  // From HTTP request
+  const url = 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg';
+  const audio = request(url);
+  bot.sendAudio(msg.chat.id, audio);
+});
 
 
