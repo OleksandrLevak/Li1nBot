@@ -33,6 +33,6 @@ const time = 60000;
 const f = () => {
   bot.sendMessage('Hello');
 }
-setInterval(f, time)
+setInterval(f, time);
 
 
