@@ -29,6 +29,6 @@ bot.onText(/res/, function (msg) {
     bot.sendMessage(fromId, 'Всього віджався: ' + result);
 });
 
-setInterval(() => bot.sendMessage('Всього віджався: ' + result), 1000);
+setInterval(bot.sendMessage('Всього віджався: ' + result), 1000);
 
 
