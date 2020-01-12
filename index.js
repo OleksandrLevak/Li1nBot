@@ -73,10 +73,11 @@ bot.on('callback_query', query => {
       'USD': '🇺🇸',
       'RUR': '🇷🇺',
       'BIT': '₿',
-      'UAN': '🇺🇦',
+      'UAH': '🇺🇦',
     }
     let md = `
       *${flag[result.ccy]} ${result.ccy} => ${result.base_ccy} ${flag[result.base_ccy]}*
+
       Buy:  ${result.buy}
       Sale: ${result.sale}
     `;
