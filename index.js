@@ -29,7 +29,7 @@ bot.onText(/res/, function (msg) {
          bot.sendMessage(fromId, 'Всього віджався: ' + result);
 });
 
-bot.onText(/\/curse/, function (msg) {
+bot.onText(/\/course/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
        bot.sendMessage(fromId, 'test');
