@@ -10,6 +10,8 @@ const url = process.env.APP_URL || 'https://li1n-bot.herokuapp.com:443';
 const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
+const request = require('request');
+
 
 var counter = [];
 
@@ -32,7 +34,31 @@ bot.onText(/res/, function (msg) {
 bot.onText(/\/course/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
-       bot.sendMessage(fromId, 'test');
+       bot.sendMessage(fromId, 'Яка валюта вас цікавить', {
+         reply_markup: {
+           inline_keyboard: [
+             [
+               {
+                 text: 'EUR',
+                 callback_data: 'EUR'
+               },
+               {
+                text: 'USD',
+                callback_data: 'USD'
+              },
+              {
+                text: 'BIT',
+                callback_data: 'BIT'
+              },
+              {
+                text: 'RUR',
+                callback_data: 'RUR'
+              },
+
+             ]
+           ]
+         }
+       });
 });
 
 
