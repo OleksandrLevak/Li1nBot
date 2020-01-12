@@ -71,8 +71,8 @@ bot.on('callback_query', query => {
 
     let md = `
       *${result.ccy} => ${result.base_ccy}*
-      Buy: _${result.buy}_
-      Sale: _${result.sale}_
+      Buy:  ${result.buy}
+      Sale: ${result.sale}
     `;
     bot.sendMessage(id, md, {parse_mode: 'Markdown'});
   }
