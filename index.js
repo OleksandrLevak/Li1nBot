@@ -47,8 +47,8 @@ bot.onText(/\/curse/, function (msg) {
                 callback_data: 'USD'
               },
               {
-                text: '₿ - BIT',
-                callback_data: 'BIT'
+                text: '₿ - BTC',
+                callback_data: 'BTC'
               },
               {
                 text: '₽ - RUR',
@@ -72,7 +72,7 @@ bot.on('callback_query', query => {
       'EUR': '🇪🇺',
       'USD': '🇺🇸',
       'RUR': '🇷🇺',
-      'BIT': '₿',
+      'BTC': '₿',
       'UAH': '🇺🇦',
     }
     let md = `
