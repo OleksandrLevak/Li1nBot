@@ -31,7 +31,7 @@ bot.onText(/res/, function (msg) {
          bot.sendMessage(fromId, 'Всього віджався: ' + result);
 });
 
-bot.onText(/\/course/, function (msg) {
+bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
        bot.sendMessage(fromId, 'Яка валюта вас цікавить', {
