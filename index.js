@@ -39,19 +39,19 @@ bot.onText(/\/course/, function (msg) {
            inline_keyboard: [
              [
                {
-                 text: 'EUR',
+                 text: '€ - EUR',
                  callback_data: 'EUR'
                },
                {
-                text: 'USD',
+                text: '$ - USD',
                 callback_data: 'USD'
               },
               {
-                text: 'BIT',
+                text: '₿ - BIT',
                 callback_data: 'BIT'
               },
               {
-                text: 'RUR',
+                text: '₽ - RUR',
                 callback_data: 'RUR'
               },
 
@@ -61,5 +61,22 @@ bot.onText(/\/course/, function (msg) {
        });
 });
 
+bot.on('callback_query', query => {
+  const id = query.message.chat.id;
+
+  request('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5', 
+  function(error, response, body){
+    const data = JSON.parse(body);
+    const result = data.filter(item => item.ccy === query.data)[0];
+
+    let md = `
+      *${result.ccy} => ${result.base_ccy}*
+      Buy: _${result.buy}_
+      Sale: _${result.sale}_
+    `;
+    bot.sendMessage(id, md, {parse_mode: 'Markdown'});
+  }
+  );
+})
 
 
