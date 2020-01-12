@@ -68,7 +68,13 @@ bot.on('callback_query', query => {
   function(error, response, body){
     const data = JSON.parse(body);
     const result = data.filter(item => item.ccy === query.data)[0];
-
+    const flag = {
+      'EUR': '🇪🇺',
+      'USD': '🇺🇸',
+      'RUR': '🇷🇺',
+      'BIT': '₿',
+      'UAN': '🇺🇦',
+    }
     let md = `
       *${result.ccy} => ${result.base_ccy}*
       Buy:  ${result.buy}
