@@ -68,7 +68,7 @@ bot.on('callback_query', query => {
   request('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json', 
   function(error, response, body){
     const data = JSON.parse(body);
-    const result = data.filter(item => item.ccy === query.data)[0];
+    const result = data.filter(item => item.cc === query.data)[0];
     const flag = {
       'EUR': '🇪🇺',
       'USD': '🇺🇸',
