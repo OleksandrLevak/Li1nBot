@@ -16,7 +16,8 @@ const request = require('request');
 var counter = [];
 
 bot.onText(/(^[0-9]+)/, function (msg, match) {
-    var fromId = msg.from.id; // Получаем ID отправителя fefwfef
+    var fromId = msg.from.id; // Получаем ID отправителя 
+    
     var resp = match[1];
     let pars = parseInt(resp);
     counter.push(pars);
