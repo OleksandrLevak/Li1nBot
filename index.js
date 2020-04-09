@@ -65,7 +65,7 @@ bot.onText(/\/curse/, function (msg) {
 bot.on('callback_query', query => {
   const id = query.message.chat.id;
 
-  request('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5', 
+  request('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json', 
   function(error, response, body){
     const data = JSON.parse(body);
     const result = data.filter(item => item.ccy === query.data)[0];
@@ -77,10 +77,10 @@ bot.on('callback_query', query => {
       'UAH': '🇺🇦',
     }
     let md = `
-      *${flag[result.ccy]} ${result.ccy} 💱 ${result.base_ccy} ${flag[result.base_ccy]}*
+      *${flag['UAH']} UAH 💱 ${result.cc} ${flag[result.cc]}*
 
-      Buy:  ${result.buy}
-      Sale: ${result.sale}
+      Rate:  ${result.rate}
+
     `;
     bot.sendMessage(id, md, {parse_mode: 'Markdown'});
   }
