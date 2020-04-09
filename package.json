@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "node": "^12.13.0",
     "node-telegram-bot-api": "^0.40.0",
     "request": "^2.88.0",
     "telegraf": "^3.34.1"
