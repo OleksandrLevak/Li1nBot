@@ -77,7 +77,7 @@ bot.on('callback_query', query => {
       'UAH': '🇺🇦',
     }
     let md = `
-      *${flag['UAH']} UAH 💱 ${result.cc} ${flag[result.cc]}*
+      *UAH 💱 ${result.cc} ${flag[result.cc]}*
 
       Rate:  ${result.rate}
 
