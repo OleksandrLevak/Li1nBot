@@ -35,7 +35,7 @@ bot.onText(/res/, function (msg) {
 bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
-       bot.sendMessage(fromId, 'Яка валюта вас цікавить', {
+       bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
          reply_markup: {
            inline_keyboard: [
              [
