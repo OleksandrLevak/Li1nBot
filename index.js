@@ -14,7 +14,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 
-bot.onText('hello', msg => {  
+bot.onText('hello', function (msg) {  
     bot.sendMessage(msg.from.id, `Hello ${from.first_name}`);
 });
 
