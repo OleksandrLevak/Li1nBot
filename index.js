@@ -13,7 +13,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 const request = require('request');
 
 
-bot.on('message', msg =>{
+bot.on('message', msg => {
     var fromId = msg.from.id; // Получаем ID отправителя 
   
     bot.sendMessage(fromId, `Hello ${from.first_name}`);
