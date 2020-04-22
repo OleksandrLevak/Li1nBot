@@ -15,7 +15,6 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 const html = `
 <strong>Hello, ${msg.from.first_name}</strong>
-<pre>${debug(msg)}</pre>
 `;
 
 
