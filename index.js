@@ -12,10 +12,8 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-
-
 bot.onText('hello', function (msg) {  
-    bot.sendMessage(msg.from.id, `Hello ${from.first_name}`);
+    bot.sendMessage(msg.from.id, "Hello");
 });
 
 
