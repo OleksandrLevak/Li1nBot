@@ -1,6 +1,7 @@
 const TOKEN = process.env.TELEGRAM_TOKEN || '1013712671:AAF0AzZ0zGawEY6X11SkGfXU5C_S70ld6lI';
 const TelegramBot = require('node-telegram-bot-api');
 const request = require('request');
+const debug = require('./helpers.js');
 const options = {
   webHook: {
     port: process.env.PORT
@@ -12,8 +13,9 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-bot.onText('hello', function (msg) {  
-    bot.sendMessage(msg.from.id, "Hello");
+bot.onText('hello', function (msg) { 
+    const { id } = msg.chat; 
+    bot.sendMessage(id, debug(msg));
 });
 
 
