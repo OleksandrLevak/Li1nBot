@@ -15,8 +15,8 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 const html = `
 <strong>Hello, ${msg.from.first_name}</strong>
-<p>${debug(msg)}</p>
-`
+<pre>${debug(msg)}</pre>
+`;
 
 
 bot.onText(/\/json/, function (msg) {
