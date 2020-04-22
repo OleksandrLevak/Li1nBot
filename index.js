@@ -13,7 +13,7 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-bot.onText(/json/, function (msg) {
+bot.onText(/\json/, function (msg) {
 
   const html = `
 <strong>Hello, ${msg.from.first_name}</strong>
