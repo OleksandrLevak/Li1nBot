@@ -15,11 +15,11 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 const html = `
 <strong>Hello, ${msg.from.first_name}</strong>
-`;
+`
 
 
 bot.onText(/\/json/, function (msg) {
-         bot.sendMessage(msg.from.id, html, {
+         bot.sendMessage(msg.chat.id, html, {
            parse_mode: 'HTML'
          });
 });
