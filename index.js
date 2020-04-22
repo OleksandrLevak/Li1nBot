@@ -14,7 +14,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 
-bot.onText(/\/JSON/, function (msg) {
+bot.onText(/\/json/, function (msg) {
     var fromId = msg.from.id; // Получаем ID отправителя
          bot.sendMessage(fromId, debug(msg));
 });
