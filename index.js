@@ -13,24 +13,12 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 const request = require('request');
 
 
-var counter = [];
-
-bot.onText(/(^[0-9]+)/, function (msg, match) {
+bot.on('message', function (msg, match) {
     var fromId = msg.from.id; // Получаем ID отправителя 
-    
-    var resp = match[1];
-    let pars = parseInt(resp);
-    counter.push(pars);
-    bot.deleteMessage(fromId, msg.message_id);
+  
+    bot.sendMessage(fromId, `Hello ${from.first_name}`);
 });
 
-bot.onText(/res/, function (msg) {
-    var fromId = msg.from.id; // Получаем ID отправителя
-        var result = counter.reduce(function(sum, current) {
-            return sum + current
-         });
-         bot.sendMessage(fromId, 'Всього віджався: ' + result);
-});
 
 bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
