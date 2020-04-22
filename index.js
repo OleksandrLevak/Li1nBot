@@ -19,8 +19,7 @@ const html = `
 
 
 bot.onText(/\/json/, function (msg) {
-    var fromId = msg.from.id; // Получаем ID отправителя
-         bot.sendMessage(fromId, html, {
+         bot.sendMessage(msg.from.id, html, {
            parse_mode: 'HTML'
          });
 });
