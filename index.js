@@ -19,6 +19,11 @@ bot.onText(/res/, function (msg) {
          bot.sendMessage(fromId, debug(msg));
 });
 
+bot.on('message', msg =>  {
+  var fromId = msg.from.id; // Получаем ID отправителя
+       bot.sendMessage(fromId, msg.from.first_name);
+});
+
 bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
