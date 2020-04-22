@@ -13,15 +13,11 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-const html = `
-<strong>Hello, ${msg.from.first_name}</strong>
-`
+const html = `<strong>Hello, ${msg.from.first_name}</strong>`;
 
 
 bot.onText(/\/json/, function (msg) {
-         bot.sendMessage(msg.chat.id, html, {
-           parse_mode: 'HTML'
-         });
+         bot.sendMessage(msg.chat.id, html, {parse_mode: 'HTML'});
 });
 
 bot.onText(/\/curse/, function (msg) {
