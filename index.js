@@ -13,16 +13,18 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
+const html = `
+<strong>Hello, ${msg.from.first_name}</strong>
+<p>${debug(msg)}</p>
+`
+
 
 bot.onText(/\/json/, function (msg) {
     var fromId = msg.from.id; // Получаем ID отправителя
-         bot.sendMessage(fromId, debug(msg));
+         bot.sendMessage(fromId, html, {
+           parse_mode: 'HTML'
+         });
 });
-
-// bot.on('message', msg =>  {
-//   var fromId = msg.from.id; // Получаем ID отправителя
-//        bot.sendMessage(fromId, msg.from.first_name);
-// });
 
 bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
