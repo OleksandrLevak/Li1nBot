@@ -13,9 +13,9 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 const request = require('request');
 
 
-bot.on('message', msg => {  
-    bot.sendMessage(msg.from.id, `Hello ${from.first_name}`);
-});
+// bot.on('message', msg => {  
+//     bot.sendMessage(msg.from.id, `Hello ${from.first_name}`);
+// });
 
 
 bot.onText(/\/curse/, function (msg) {
