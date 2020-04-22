@@ -16,7 +16,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 bot.onText(/res/, function (msg) {
     var fromId = msg.from.id; // Получаем ID отправителя
-         bot.sendMessage(fromId, JSON.stringify(msg, null, 4));
+         bot.sendMessage(fromId, debug(msg));
 });
 
 bot.onText(/\/curse/, function (msg) {
