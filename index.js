@@ -13,7 +13,7 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-bot.onText('hello', function (msg) { 
+bot.onText(/hello/, function (msg) { 
     const { id } = msg.chat; 
     bot.sendMessage(id, debug(msg));
 });
