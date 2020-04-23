@@ -13,11 +13,23 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-
-bot.onText(/ДС/, function (msg) {
-    var fromId = msg.from.id; 
-      bot.sendMessage(fromId,
-        'https://docs.google.com/spreadsheets/d/10FMNX9eli5hQMcsf6S9egT-n8gw_1bt4NLaXYDz2z9k/edit#gid=0');
+bot.onText(/\/key/, function (msg) {
+  var fromId = msg.from.id; 
+    bot.sendMessage(fromId, 'Клавіатура', {
+    reply_markup: {
+      keyboard: [
+        [{
+          text: 'Location',
+          request_location: true
+        },
+        {
+          text: 'My phone number',
+          request_contact: true
+        }],
+      ]
+    },
+      one_time_keyboard: true
+  });
 
 });
 
