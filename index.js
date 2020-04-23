@@ -26,9 +26,9 @@ bot.onText(/\/key/, function (msg) {
           text: 'My phone number',
           request_contact: true
         }],
-      ]
-    },
+      ],
       one_time_keyboard: true
+    },
   });
 
 });
