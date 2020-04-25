@@ -105,26 +105,28 @@ bot.on('callback_query', query => {
 
 bot.on('inline_query', query => {
 
-  results = [
-    {
-      type: "article",
-      id : "1",
-      title : "TestTitle",
-      input_message_content: {
-        message_text: "Good"
-      }
-   },
-   {
+  results = [];
+
+  const obj1 = {
     type: "article",
-    id : "2",
-    title : "TestTitle2",
+    id : "1",
+    title : "TestTitle",
     input_message_content: {
       message_text: "Good"
     }
- }
-  ]
+ };
 
+ const obj2 = {
+  type: "article",
+  id : "2",
+  title : "TestTitle2",
+  input_message_content: {
+    message_text: "Good"
+  }
+};
 
+result.push(obj1);
+result.push(obj2);
 
   bot.answerInlineQuery(query.id, results, {
     cache_time: 0
