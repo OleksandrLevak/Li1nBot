@@ -105,20 +105,28 @@ bot.on('callback_query', query => {
 
 bot.on('inline_query', query => {
 
-  const results = [];
+  results = [
+    {
+      type: "photo",
+      id : "1",
+      photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      title : "TestTitle",
+      photo_width: 40,
+      photo_height: 40
+   },
+   {
+    type: "photo",
+    id : "2",
+    photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    title : "TestTitle2",
+    photo_width: 40,
+    photo_height: 40
+ }
+  ]
 
-  for(let i = 0; i < 5; i++){
 
-    results.push({
-      type: 'article',
-      id : i.toString(),
-      title : 'TestTitle' + i,
-      input_message_content: {
-        message_text: `Article #${i + 1}`
-      }
-    })
-  }
-  
 
   bot.answerInlineQuery(query.id, results, {
     cache_time: 0
