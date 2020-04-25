@@ -109,23 +109,16 @@ bot.on('inline_query', query => {
 
   for(let i = 0; i < 5; i++){
 
-    let obj1 = {
+    results.push({
       type: 'article',
       id : i.toString(),
       title : 'TestTitle' + i,
       input_message_content: {
         message_text: `Article #${i + 1}`
       }
-    }
-
-    results.push(obj1);
+    })
   }
   
- }
-
-
-
-
 
   bot.answerInlineQuery(query.id, results, {
     cache_time: 0
