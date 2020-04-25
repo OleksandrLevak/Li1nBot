@@ -96,7 +96,7 @@ bot.on('callback_query', query => {
       Buy:  ${result.buy}
       Sale: ${result.sale}
     `;
-    bot.answerCallbackQuery(id, `${flag[result.ccy]}`);
+    bot.answerCallbackQuery(query.id, `${flag[result.ccy]}`);
     bot.sendMessage(id, md, {parse_mode: 'Markdown'});
     
   }
