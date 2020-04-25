@@ -125,8 +125,8 @@ bot.on('inline_query', query => {
   }
 };
 
-result.push(obj1);
-result.push(obj2);
+results.push(obj1);
+results.push(obj2);
 
   bot.answerInlineQuery(query.id, results, {
     cache_time: 0
