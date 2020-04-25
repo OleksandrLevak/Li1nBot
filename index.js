@@ -103,4 +103,23 @@ bot.on('callback_query', query => {
   );
 })
 
+bot.on('inline_query', query => {
+
+  result = [
+    {
+      type: "photo",
+      id : "1",
+      photo_url :"http://website.com/photo.jpg",
+      thumb_url :"http://website.com/thumb.jpg",
+      title : "TestTitle"
+   }
+  ]
+
+
+
+  bot.answerInlineQuery(query.id, result, {
+    cache_time: 0
+  })
+})
+
 
