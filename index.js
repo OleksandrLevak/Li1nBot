@@ -105,7 +105,7 @@ bot.on('callback_query', query => {
 
 bot.on('inline_query', query => {
 
-  results = [];
+  const results = [];
 
   const obj1 = {
     type: 'article',
