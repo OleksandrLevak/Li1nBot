@@ -109,10 +109,21 @@ bot.on('inline_query', query => {
     {
       type: "photo",
       id : "1",
-      photo_url :"http://website.com/photo.jpg",
-      thumb_url :"http://website.com/thumb.jpg",
-      title : "TestTitle"
-   }
+      photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      title : "TestTitle",
+      photo_width: 400,
+      photo_height: 400
+   },
+   {
+    type: "photo",
+    id : "2",
+    photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    title : "TestTitle2",
+    photo_width: 400,
+    photo_height: 400
+ }
   ]
 
 
