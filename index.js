@@ -107,26 +107,25 @@ bot.on('inline_query', query => {
 
   const results = [];
 
-  const obj1 = {
-    type: 'article',
-    id : '1',
-    title : 'TestTitle',
-    input_message_content: {
-      message_text: 'Good'
+  for(let i = 0; i < 5; i++){
+
+    let obj1 = {
+      type: 'article',
+      id : i.toString(),
+      title : 'TestTitle' + i,
+      input_message_content: {
+        message_text: `Article #${i + 1}`
+      }
     }
- };
 
- const obj2 = {
-  type: 'article',
-  id : '2',
-  title : 'TestTitle2',
-  input_message_content: {
-    message_text: 'Good'
+    results.push(obj1);
   }
-};
+  
+ }
 
-results.push(obj1);
-results.push(obj2);
+
+
+
 
   bot.answerInlineQuery(query.id, results, {
     cache_time: 0
