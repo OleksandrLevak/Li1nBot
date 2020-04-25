@@ -108,20 +108,20 @@ bot.on('inline_query', query => {
   results = [];
 
   const obj1 = {
-    type: "article",
-    id : "1",
-    title : "TestTitle",
+    type: 'article',
+    id : '1',
+    title : 'TestTitle',
     input_message_content: {
-      message_text: "Good"
+      message_text: 'Good'
     }
  };
 
  const obj2 = {
-  type: "article",
-  id : "2",
-  title : "TestTitle2",
+  type: 'article',
+  id : '2',
+  title : 'TestTitle2',
   input_message_content: {
-    message_text: "Good"
+    message_text: 'Good'
   }
 };
 
