@@ -97,6 +97,7 @@ bot.on('callback_query', query => {
       Sale: ${result.sale}
     `;
     bot.sendMessage(id, md, {parse_mode: 'Markdown'});
+    bot.answerCallbackQuery(id, `${flag[result.ccy]}`);
   }
   );
 })
