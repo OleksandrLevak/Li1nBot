@@ -105,15 +105,15 @@ bot.on('callback_query', query => {
 
 bot.on('inline_query', query => {
 
-  result = [
+  results = [
     {
       type: "photo",
       id : "1",
       photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
       thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
       title : "TestTitle",
-      photo_width: 400,
-      photo_height: 400
+      photo_width: 40,
+      photo_height: 40
    },
    {
     type: "photo",
@@ -121,14 +121,14 @@ bot.on('inline_query', query => {
     photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
     thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
     title : "TestTitle2",
-    photo_width: 400,
-    photo_height: 400
+    photo_width: 40,
+    photo_height: 40
  }
   ]
 
 
 
-  bot.answerInlineQuery(query.id, result, {
+  bot.answerInlineQuery(query.id, results, {
     cache_time: 0
   })
 })
