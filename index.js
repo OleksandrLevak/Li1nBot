@@ -96,8 +96,9 @@ bot.on('callback_query', query => {
       Buy:  ${result.buy}
       Sale: ${result.sale}
     `;
-    bot.sendMessage(id, md, {parse_mode: 'Markdown'});
     bot.answerCallbackQuery(id, `${flag[result.ccy]}`);
+    bot.sendMessage(id, md, {parse_mode: 'Markdown'});
+    
   }
   );
 })
