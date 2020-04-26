@@ -50,10 +50,8 @@ bot.onText(/\json/, function (msg) {
 bot.onText(/\/delete/, function (msg) {
 
   const lastMess = message_id;
-
-    var fromId = msg.from.id; 
     
-      bot.deleteMessage(fromId, lastMess);
+      bot.deleteMessage(chat.id, lastMess);
          
 });
 
