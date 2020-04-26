@@ -49,7 +49,7 @@ bot.onText(/\json/, function (msg) {
 
 bot.onText(/\/delete/, function (msg) {
     
-      bot.deleteMessage(msg.chat.id, message_id);
+      bot.deleteMessage(msg.from.id, message_id);
          
 });
 
