@@ -118,8 +118,8 @@ bot.on('inline_query', query => {
    {
     type: "photo",
     id : "2",
-    photo_url :"https://lh3.googleusercontent.com/proxy/ZCgBWKTAW2xXoTleNpfasi6lKI-h6AD5BWFWajnPBuDrU5yt-k4HrMpvqdLgWD2ipdj1cyu9-ryvfN0TrF9IUUhEPmouXWvz",
-    thumb_url :"https://lh3.googleusercontent.com/proxy/ZCgBWKTAW2xXoTleNpfasi6lKI-h6AD5BWFWajnPBuDrU5yt-k4HrMpvqdLgWD2ipdj1cyu9-ryvfN0TrF9IUUhEPmouXWvz",
+    photo_url :"https://cs8.pikabu.ru/post_img/2017/06/20/8/1497966721191420192.jpg",
+    thumb_url :"https://cs8.pikabu.ru/post_img/2017/06/20/8/1497966721191420192.jpg",
     title : "TestTitle2",
     photo_width: 40,
     photo_height: 40
@@ -127,10 +127,10 @@ bot.on('inline_query', query => {
  {
   type: "photo",
   id : "3",
-  photo_url :"https://lh3.googleusercontent.com/proxy/VtGFwiYTw_8G5pRHrBpV1P4SfbT3QA0bgI8cMTKn_UiR87uQtDu4se9FsVT-XnNsjp_OsYGC01imLEirSRTu6nCOBlg",
-  thumb_url :"https://lh3.googleusercontent.com/proxy/VtGFwiYTw_8G5pRHrBpV1P4SfbT3QA0bgI8cMTKn_UiR87uQtDu4se9FsVT-XnNsjp_OsYGC01imLEirSRTu6nCOBlg",
+  photo_url :"https://cs9.pikabu.ru/post_img/2017/04/02/8/149113711118483729.jpg",
+  thumb_url :"https://cs9.pikabu.ru/post_img/2017/04/02/8/149113711118483729.jpg",
   title : "TestTitle3",
-  photo_width: 40,
+  photo_width: 50,
   photo_height: 40
 },
 
