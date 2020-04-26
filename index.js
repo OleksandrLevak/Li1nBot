@@ -46,6 +46,20 @@ bot.onText(/\json/, function (msg) {
          bot.sendMessage(fromId, html, {parse_mode: 'HTML'});
 });
 
+
+bot.onText(/\delete/, function (msg) {
+
+  const lastMess = message_id;
+
+    var fromId = msg.from.id; 
+    
+    for(let i = 0; i < lastMess; i++){
+      bot.deleteMessage(fromId, i);
+    }
+         
+});
+
+
 bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
@@ -146,8 +160,6 @@ bot.on('inline_query', query => {
 
 
   ]
-
-
 
   bot.answerInlineQuery(query.id, results, {
     cache_time: 0
