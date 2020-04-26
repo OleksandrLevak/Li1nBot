@@ -42,7 +42,7 @@ bot.onText(/\json/, function (msg) {
 
 <pre>${debug(msg)}</pre>
 `;
-    var fromId = msg.from.id; // Получаем ID отправителя
+         var fromId = msg.from.id;
          bot.sendMessage(fromId, html, {parse_mode: 'HTML'});
 });
 
@@ -53,7 +53,7 @@ bot.onText(/\/delete/, function (msg) {
 
     var fromId = msg.from.id; 
     
-    for(let i = 0; i < lastMess; i++){
+    for(let i = 1000; i < lastMess; i++){
       bot.deleteMessage(fromId, i);
     }
          
