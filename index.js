@@ -53,9 +53,7 @@ bot.onText(/\/delete/, function (msg) {
 
     var fromId = msg.from.id; 
     
-    for(let i = 1000; i < lastMess; i++){
-      bot.deleteMessage(fromId, i);
-    }
+      bot.deleteMessage(fromId, lastMess);
          
 });
 
