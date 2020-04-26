@@ -109,21 +109,42 @@ bot.on('inline_query', query => {
     {
       type: "photo",
       id : "1",
-      photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
-      thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      photo_url :"https://img.anews.com/media/posts/images/20200409/127396227tw.jpg",
+      thumb_url :"https://img.anews.com/media/posts/images/20200409/127396227tw.jpg",
       title : "TestTitle",
-      photo_width: 40,
+      photo_width: 70,
       photo_height: 40
    },
    {
     type: "photo",
     id : "2",
-    photo_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
-    thumb_url :"https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    photo_url :"https://lh3.googleusercontent.com/proxy/ZCgBWKTAW2xXoTleNpfasi6lKI-h6AD5BWFWajnPBuDrU5yt-k4HrMpvqdLgWD2ipdj1cyu9-ryvfN0TrF9IUUhEPmouXWvz",
+    thumb_url :"https://lh3.googleusercontent.com/proxy/ZCgBWKTAW2xXoTleNpfasi6lKI-h6AD5BWFWajnPBuDrU5yt-k4HrMpvqdLgWD2ipdj1cyu9-ryvfN0TrF9IUUhEPmouXWvz",
     title : "TestTitle2",
     photo_width: 40,
     photo_height: 40
- }
+ },
+ {
+  type: "photo",
+  id : "3",
+  photo_url :"https://lh3.googleusercontent.com/proxy/VtGFwiYTw_8G5pRHrBpV1P4SfbT3QA0bgI8cMTKn_UiR87uQtDu4se9FsVT-XnNsjp_OsYGC01imLEirSRTu6nCOBlg",
+  thumb_url :"https://lh3.googleusercontent.com/proxy/VtGFwiYTw_8G5pRHrBpV1P4SfbT3QA0bgI8cMTKn_UiR87uQtDu4se9FsVT-XnNsjp_OsYGC01imLEirSRTu6nCOBlg",
+  title : "TestTitle3",
+  photo_width: 40,
+  photo_height: 40
+},
+
+{
+  type: "photo",
+  id : "4",
+  photo_url :"https://cs10.pikabu.ru/post_img/big/2018/06/08/10/1528473855169978071.jpg",
+  thumb_url :"https://cs10.pikabu.ru/post_img/big/2018/06/08/10/1528473855169978071.jpg",
+  title : "TestTitle3",
+  photo_width: 40,
+  photo_height: 70
+}
+
+
   ]
 
 
