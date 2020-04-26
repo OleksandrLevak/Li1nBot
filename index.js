@@ -47,7 +47,7 @@ bot.onText(/\json/, function (msg) {
 });
 
 
-bot.onText(/\delete/, function (msg) {
+bot.onText(/\/delete/, function (msg) {
 
   const lastMess = message_id;
 
