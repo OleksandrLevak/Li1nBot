@@ -47,13 +47,6 @@ bot.onText(/\json/, function (msg) {
 });
 
 
-bot.onText(/\/delete/, function (msg) {
-    
-      bot.deleteMessage(msg.from.id, message_id);
-         
-});
-
-
 bot.onText(/\/curse/, function (msg) {
   var fromId = msg.from.id; // Получаем ID отправителя
       
