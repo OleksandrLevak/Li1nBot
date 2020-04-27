@@ -47,6 +47,11 @@ bot.onText(/\/clothe/, function (msg) {
          });
 });
 
+bot.onText(/\/Шевцов/, function (msg) {
+  var fromId = msg.from.id;
+  bot.sendVideo(fromId, 'https://www.youtube.com/watch?v=Fr-tkg1gyKU&list=WL&index=29&t=0s');
+});
+
 bot.onText(/\/json/, function (msg) {
 
   const html = `
