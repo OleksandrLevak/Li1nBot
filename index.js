@@ -47,9 +47,10 @@ bot.onText(/\/clothe/, function (msg) {
          });
 });
 
-bot.onText(/\/video/, function (msg) {
+bot.onText(/\/location/, function (msg) {
   var fromId = msg.from.id;
-  bot.sendVideo(fromId, 'https://www.youtube.com/watch?v=roEsFoC14Dk&list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8&index=24');
+  
+  bot.sendLocation(fromId, 50.757301, 25.353646);
 });
 
 bot.onText(/\/json/, function (msg) {
