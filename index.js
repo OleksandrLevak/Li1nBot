@@ -46,7 +46,6 @@ bot.onText(/\/pay/, function (msg) {
       photo_url: "https://24tv.ua/resources/photos/news/201907/1177675.jpg?1562772860000",
       need_name: true,
       need_email: true,
-      is_flexible: true
     }
 
     );
