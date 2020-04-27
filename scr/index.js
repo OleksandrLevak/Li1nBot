@@ -8,7 +8,7 @@ const options = {
   }
 };
 
-const url = process.env.APP_URL || 'https://li1n-bot.herokuapp.com:443';
+const url = process.env.APP_URL || 'https://li1n-market-bot.herokuapp.com:443';
 const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
