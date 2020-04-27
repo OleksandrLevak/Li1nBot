@@ -1,25 +1,20 @@
 {
-  "name": "li1nmarket2",
+  "name": "telgram-bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.40.0",
+    "request": "^2.88.0",
+    "telegraf": "^3.34.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node index.js"
   },
   "engines": {
     "node": "12.13.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OleksandrLevak/Li1nMarketBot.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OleksandrLevak/Li1nMarketBot/issues"
-  },
-  "homepage": "https://github.com/OleksandrLevak/Li1nMarketBot#readme",
-  "dependencies": {
-    "node-telegram-bot-api": "^0.40.0"
-  }
+  "license": "ISC"
 }
