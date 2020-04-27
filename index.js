@@ -12,29 +12,6 @@ const url = process.env.APP_URL || 'https://li1n-bot.herokuapp.com:443';
 const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
-
-bot.onText(/\/key/, function (msg) {
-  var fromId = msg.from.id; 
-    bot.sendMessage(fromId, 'Клавіатура', {
-    reply_markup: {
-      keyboard: [
-        [{
-          text: 'Location',
-          request_location: true
-        },
-        {
-          text: 'My phone number',
-          request_contact: true
-        }],
-      ],
-      one_time_keyboard: true
-    },
-  });
-
-});
-
-
-
 bot.onText(/\/clothe/, function (msg) {
 
          var fromId = msg.from.id;
@@ -46,6 +23,33 @@ bot.onText(/\/clothe/, function (msg) {
 Розмір: 54 - 60`
          });
 });
+
+bot.onText(/\/pay/, function (msg) {
+  var fromId = msg.from.id;
+  bot.sendInvoice(
+    fromId, 
+    'Сукня',
+`
+Виробник: Туреччина
+Розмір: 54 - 60`,
+    'payload',
+    '632593626:TEST:i56982357197',
+    'RANDOM_KEY',
+    'UAH',
+    [
+      {
+        label: 'сукня',
+        amount: 230000
+      }
+    ],
+    {
+      photo_url: "https://media.vsisvoi.ua/images/21/41/066d751e1beea915a602fede7b8e.jpg",
+      need_name: true
+    }
+
+    );
+});
+
 
 bot.onText(/\/location/, function (msg) {
   var fromId = msg.from.id;
