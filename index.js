@@ -28,21 +28,22 @@ bot.onText(/\/pay/, function (msg) {
   var fromId = msg.from.id;
   bot.sendInvoice(
     fromId, 
-    'Сукня',
-`Виробник: Туреччина
-Розмір: 54 - 60`,
+    'Apple AirPods 2',
+`- 100% ОРИГИНАЛЬНЫЕ  Apple AirPods 
+- ГАРАНТИЯ 1 ГОД
+- ЗАВОДСКАЯ УПАКОВКА`,
     'payload',
     '632593626:TEST:i56982357197',
     'RANDOM_KEY',
     'UAH',
     [
       {
-        label: 'сукня',
-        amount: 230000
+        label: 'airpods',
+        amount: 388000
       }
     ],
     {
-      photo_url: "./one.jpg",
+      photo_url: "https://24tv.ua/resources/photos/news/201907/1177675.jpg?1562772860000",
       need_name: true,
       need_email: true,
       is_flexible: true
