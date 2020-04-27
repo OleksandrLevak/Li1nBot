@@ -35,7 +35,19 @@ bot.onText(/\/key/, function (msg) {
 
 
 
-bot.onText(/\json/, function (msg) {
+bot.onText(/\/clothe/, function (msg) {
+
+         var fromId = msg.from.id;
+         bot.sendPhoto(fromId, './one.jpg', {
+           caption: `
+           Сукні
+           Виробник: Туреччина
+           Ціна: 2300 грн.
+           Розмір: 54 - 60`
+         });
+});
+
+bot.onText(/\/json/, function (msg) {
 
   const html = `
 <strong>Hello, ${msg.from.first_name}</strong>
