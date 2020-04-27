@@ -43,8 +43,10 @@ bot.onText(/\/pay/, function (msg) {
       }
     ],
     {
-      photo_url: "https://media.vsisvoi.ua/images/21/41/066d751e1beea915a602fede7b8e.jpg",
-      need_name: true
+      photo_url: "./one.jpg",
+      need_name: true,
+      need_email: true,
+      is_flexible: true
     }
 
     );
