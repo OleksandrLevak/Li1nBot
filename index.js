@@ -29,7 +29,7 @@ bot.onText(/\/pay/, function (msg) {
   bot.sendInvoice(
     fromId, 
     'Apple AirPods 2',
-`- 100% ОРИГИНАЛЬНЫЕ  Apple AirPods 
+`- ОРИГИНАЛЬНЫЕ Apple AirPods 
 - ГАРАНТИЯ 1 ГОД
 - ЗАВОДСКАЯ УПАКОВКА`,
     'payload',
