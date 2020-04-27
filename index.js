@@ -49,9 +49,16 @@ bot.onText(/\/clothe/, function (msg) {
 
 bot.onText(/\/location/, function (msg) {
   var fromId = msg.from.id;
-  
   bot.sendLocation(fromId, 50.757301, 25.353646);
 });
+
+bot.onText(/\/contact/, function (msg) {
+  var fromId = msg.from.id;
+  bot.sendContact(fromId, '+380505437300', 'Валентина', {
+    last_name: 'Стрелюк'
+  });
+});
+
 
 bot.onText(/\/json/, function (msg) {
 
