@@ -29,8 +29,7 @@ bot.onText(/\/pay/, function (msg) {
   bot.sendInvoice(
     fromId, 
     'Сукня',
-`
-Виробник: Туреччина
+`Виробник: Туреччина
 Розмір: 54 - 60`,
     'payload',
     '632593626:TEST:i56982357197',
