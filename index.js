@@ -40,10 +40,10 @@ bot.onText(/\/clothe/, function (msg) {
          var fromId = msg.from.id;
          bot.sendPhoto(fromId, './one.jpg', {
            caption: `
-           Сукні
-           Виробник: Туреччина
-           Ціна: 2300 грн.
-           Розмір: 54 - 60`
+Сукні
+Виробник: Туреччина
+Ціна: 2300 грн.
+Розмір: 54 - 60`
          });
 });
 
