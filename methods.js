@@ -25,7 +25,7 @@ bot.onText(/\/contact/, function (msg) {
 bot.onText(/\/clothe/, function (msg) {
 
   var fromId = msg.from.id;
-  bot.sendPhoto(fromId, './one.jpg', {
+  bot.sendPhoto(fromId, 'img/one.jpg', {
     caption: `
 Сукні
 Виробник: Туреччина
