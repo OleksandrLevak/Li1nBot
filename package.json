@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node scr/index.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "12.13.0"

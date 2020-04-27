@@ -1,1 +1,1 @@
-web: node scr/index.js
+web: node scr\index.js
