@@ -26,7 +26,7 @@
            const wordCap = word.charAt(0).toUpperCase() + word.slice(1);
            arrOfCapInfo.push(wordCap);
         }
-        return arrOfCapInfo;
+        return arrOfinfo;
     }
  }
 
