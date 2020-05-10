@@ -15,9 +15,7 @@
 
         arrOfInfo.forEach(word => word.charAt(0).toUpperCase() + word.slice(1));
 
-        const arrOfCapInfo = getCapitalizedWords(arrOfInfo);
-
-        const description = `${arrOfCapInfo[0]}\nВиробництво: ${arrOfCapInfo[1]}\nРозмір: ${arrOfCapInfo[2]}\nЦіна: ${arrOfCapInfo[3]} грн.\n№ ${arrOfCapInfo[4]}\n`
+        const description = `${arrOfInfo[0]}\nВиробництво: ${arrOfInfo[1]}\nРозмір: ${arrOfInfo[2]}\nЦіна: ${arrOfInfo[3]} грн.\n№ ${arrOfInfo[4]}\n`
         return description;
     },
  }
