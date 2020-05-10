@@ -10,7 +10,7 @@
     },
     
     getItemDescription(source){
-        return source.substr(2, source.length).split(' ');
+        return source.substr(2, source.length).split(' ')[0];
     }
  }
 
