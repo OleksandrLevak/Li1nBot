@@ -141,7 +141,8 @@ bot.onText(/\/key/, function (msg) {
 
 bot.onText(/\/c(.+)/, (msg, [source, match]) => {
   const chatId = helpers.getChatId(msg);
-  const description = helpers.debug(source);
+  const description = helpers.getItemDescription(source);
+
   bot.sendMessage(chatId, description);
 })
 

@@ -9,7 +9,7 @@
         return msg.chat.id;
     },
     
-    getItemUuid(source){
+    getItemDescription(source){
         return source.substr(2, source.length);
     }
  }
