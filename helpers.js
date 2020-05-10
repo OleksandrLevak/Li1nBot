@@ -23,7 +23,7 @@
         const arrOfCapInfo = []
 
         for(word of arrOfinfo){
-           const wordCap = word.charAt(0).toUpperCase() + name.slice(1);
+           const wordCap = word.charAt(0).toUpperCase() + word.slice(1);
            arrOfCapInfo.push(wordCap);
         }
         return arrOfCapInfo;
