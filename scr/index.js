@@ -151,21 +151,23 @@ bot.onText(/\/inst(.+)/, (msg, [source, match]) => {
 
     const instaUser = helpers.getInstUser(source);
 
-    userInstagram("valentine_clothes")
-        .then(result => {
 
-            const res = []
-
-            const { posts } = result;
-
-            for (el of posts) {
-                res.push([el.url, el.caption])
-            }
-
-            bot.sendMessage(chatId, JSON.stringify(res));
-
-        });
 
 
 
 })
+
+userInstagram("valentine_clothes")
+    .then(result => {
+
+        const res = []
+
+        const { posts } = result;
+
+        for (el of posts) {
+            res.push([el.url, el.caption])
+        }
+
+        bot.sendMessage(chatId, JSON.stringify(res));
+
+    });
