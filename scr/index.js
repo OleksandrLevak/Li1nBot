@@ -140,12 +140,3 @@ bot.onText(/\/c(.+)/, (msg, [source, match]) => {
 
     bot.sendMessage(chatId, description);
 })
-
-
-/*bot.onText(/\/inst(.+)/, (msg, [source, match]) => {
-    const chatId = helpers.getChatId(msg);
-
-    const posts = getPostInstagram(source);
-
-    bot.sendMessage(chatId, posts);
-})*/
