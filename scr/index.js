@@ -137,13 +137,13 @@ bot.onText(/\/key/, function(msg) {
 });
 
 bot.onText(/\/c(.+)/, (msg, [source, match]) => {
-const chatId = helpers.getChatId(msg);
-const description = helpers.getItemDescription(source);
+    const chatId = helpers.getChatId(msg);
+    const description = helpers.getItemDescription(source);
 
-bot.sendMessage(chatId, description);
+    bot.sendMessage(chatId, description);
 })
 
-)
+
 bot.onText(/\/inst(.+)/, (msg, [source, match]) => {
     const chatId = helpers.getChatId(msg);
 
