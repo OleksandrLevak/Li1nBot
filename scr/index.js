@@ -162,8 +162,10 @@ bot.onText(/\/inst(.+)/, (msg, [source, match]) => {
                 res.push([el.url, el.caption])
             }
 
-            bot.sendMessage(chatId, res);
+            bot.sendMessage(chatId, JSON.stringify(res));
+
         });
+
 
 
 })
