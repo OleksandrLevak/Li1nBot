@@ -6,7 +6,8 @@
   "dependencies": {
     "node-telegram-bot-api": "^0.40.0",
     "request": "^2.88.0",
-    "telegraf": "^3.34.1"
+    "telegraf": "^3.34.1",
+    "user-instagram": "^2.0.8"
   },
   "devDependencies": {},
   "scripts": {
