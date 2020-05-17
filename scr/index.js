@@ -2,6 +2,7 @@ const TOKEN = process.env.TELEGRAM_TOKEN || '1013712671:AAF0AzZ0zGawEY6X11SkGfXU
 const TelegramBot = require('node-telegram-bot-api');
 const request = require('request');
 const helpers = require('../helpers');
+const userInstagram = require("user-instagram");
 const options = {
     webHook: {
         port: process.env.PORT
@@ -143,4 +144,26 @@ bot.onText(/\/c(.+)/, (msg, [source, match]) => {
     const description = helpers.getItemDescription(source);
 
     bot.sendMessage(chatId, description);
+})
+
+bot.onText(/\/inst(.+)/, (msg, [source, match]) => {
+    const chatId = helpers.getChatId(msg);
+
+    const instaUser = helpers.getInstUser(source);
+
+    userInstagram("valentine_clothes")
+        .then(result => {
+
+            const res = []
+
+            const { posts } = result;
+
+            for (el of posts) {
+                res.push([el.url, el.caption])
+            }
+
+            bot.sendMessage(chatId, res);
+        });
+
+
 })

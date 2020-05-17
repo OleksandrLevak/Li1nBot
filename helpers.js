@@ -16,5 +16,8 @@ module.exports = {
 
         const description = `${arrOfInfo[0]}\nВиробництво: ${arrOfInfo[1]}\nРозмір: ${arrOfInfo[2]}\nЦіна: ${arrOfInfo[3]} грн.\n№ ${arrOfInfo[4]}\n`
         return description;
+    },
+    getInstUser(source) {
+        return source.substr(3, source.length);
     }
 }
