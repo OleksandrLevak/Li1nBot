@@ -20,7 +20,10 @@ module.exports = {
     },
 
     getPostInstagram(user) {
-        userInstagram(user)
+
+        const subUser = user.substr(3, source.length);
+
+        userInstagram(subUser)
             .then(result => {
 
                 const res = []
