@@ -1,4 +1,3 @@
-const userInstagram = require("user-instagram");
 module.exports = {
 
     debug(obj = {}) {
