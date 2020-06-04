@@ -3,7 +3,6 @@
 
 const TelegramBot = require('node-telegram-bot-api');
 const request = require('request');
-const mongoose = require('mongoose');
 const helpers = require('../helpers');
 
 const options = {
@@ -11,12 +10,6 @@ const options = {
     port: process.env.PORT,
   },
 };
-
-mongoose.Promise = global.Promise;
-
-mongoose.connect(process.env.DB_URL, {
-  useMongoClient: true,
-});
 
 const bot = new TelegramBot(process.env.TOKEN, options);
 bot.setWebHook(`${process.env.APP_URL}/bot${process.env.TOKEN}`);
