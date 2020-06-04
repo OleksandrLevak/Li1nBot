@@ -14,7 +14,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 bot.onText(/\/curse/, msg => {
-    const fromId = msg.from.id; 
+    const fromId = msg.chat.id; 
 
     bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
         reply_markup: {
@@ -69,7 +69,7 @@ bot.on('callback_query', query => {
 })
 
 bot.onText(/\/key/, msg => {
-    const fromId = msg.from.id;
+    const fromId = msg.chat.id;
     bot.sendMessage(fromId, 'Клавіатура', {
         reply_markup: {
             keyboard: [
@@ -90,7 +90,7 @@ bot.onText(/\/key/, msg => {
 });
 
 bot.onText(/\/location/, msg => {
-    const fromId = msg.from.id;
+    const fromId = msg.chat.id;
     const longitude = msg.location.longitude;
     const latitude = msg.location.latitude;
     bot.sendLocation(fromId, latitude, longitude);
