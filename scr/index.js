@@ -13,7 +13,7 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-bot.onText(/\/curse/, msg => {
+bot.onText(/\/curse/, function(msg) {
     let fromId = msg.from.id; 
 
     bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
@@ -69,7 +69,7 @@ bot.on('callback_query', query => {
 })
 
 bot.onText(/\/key/, msg => {
-    const fromId = msg.chat.id;
+    const fromId = msg.from.id;
     bot.sendMessage(fromId, 'Клавіатура', {
         reply_markup: {
             keyboard: [
