@@ -1,7 +1,9 @@
+'use strict';
+
 module.exports = {
 
-    getFromId(msg) {
-        return msg.from.id;
-    },
+  getFromId(msg) {
+    return msg.from.id;
+  },
 
-}
+};

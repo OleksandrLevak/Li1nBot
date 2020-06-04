@@ -5,11 +5,13 @@
     "main": "index.js",
     "dependencies": {
         "node-telegram-bot-api": "^0.40.0",
-        "request": "^2.88.0",
-        "telegraf": "^3.34.1",
-        "user-instagram": "^2.0.8"
+        "request": "^2.88.0"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "eslint": "^7.1.0",
+        "eslint-config-metarhia": "^7.0.1",
+        "eslint-plugin-import": "^2.20.2"
+    },
     "scripts": {
         "start": "node ./scr/index.js"
     },
