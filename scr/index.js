@@ -14,7 +14,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 bot.onText(/\/curse/, msg => {
-    const fromId = helpers.getFromId(msg); 
+    const fromId = msg.from.id; 
 
     bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
         reply_markup: {
@@ -69,7 +69,7 @@ bot.on('callback_query', query => {
 })
 
 bot.onText(/\/key/, msg => {
-    var fromId = msg.from.id;
+    const fromId = msg.from.id;
     bot.sendMessage(fromId, 'Клавіатура', {
         reply_markup: {
             keyboard: [
