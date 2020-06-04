@@ -10,30 +10,6 @@ bot.onText(/ДС/, function (msg) {
 });
 
 
-bot.onText(/\/location/, function (msg) {
-  var fromId = msg.from.id;
-  bot.sendLocation(fromId, 50.757301, 25.353646);
-});
-
-bot.onText(/\/contact/, function (msg) {
-  var fromId = msg.from.id;
-  bot.sendContact(fromId, '+380505437300', 'Валентина', {
-    last_name: 'Стрелюк'
-  });
-});
-
-bot.onText(/\/clothe/, function (msg) {
-
-  var fromId = msg.from.id;
-  bot.sendPhoto(fromId, 'img/one.jpg', {
-    caption: `
-Сукні
-Виробник: Туреччина
-Ціна: 2300 грн.
-Розмір: 54 - 60`
-  });
-});
-
 bot.onText(/\/pay/, function (msg) {
 var fromId = msg.from.id;
 bot.sendInvoice(

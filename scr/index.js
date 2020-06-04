@@ -13,8 +13,8 @@ const bot = new TelegramBot(TOKEN, options);
 bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
-bot.onText(/\/curse/, function(msg) {
-    var fromId = msg.from.id; // Получаем ID отправителя
+bot.onText(/\/curse/, msg => {
+    const fromId = helpers.getChatId(msg); 
 
     bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
         reply_markup: {
@@ -68,56 +68,7 @@ bot.on('callback_query', query => {
     );
 })
 
-
-bot.on('inline_query', query => {
-
-    results = [{
-            type: "photo",
-            id: "1",
-            photo_url: "https://img.anews.com/media/posts/images/20200409/127396227tw.jpg",
-            thumb_url: "https://img.anews.com/media/posts/images/20200409/127396227tw.jpg",
-            title: "TestTitle",
-            photo_width: 70,
-            photo_height: 40
-        },
-        {
-            type: "photo",
-            id: "2",
-            photo_url: "https://cs8.pikabu.ru/post_img/2017/06/20/8/1497966721191420192.jpg",
-            thumb_url: "https://cs8.pikabu.ru/post_img/2017/06/20/8/1497966721191420192.jpg",
-            title: "TestTitle2",
-            photo_width: 40,
-            photo_height: 40
-        },
-        {
-            type: "photo",
-            id: "3",
-            photo_url: "https://cs9.pikabu.ru/post_img/2017/04/02/8/149113711118483729.jpg",
-            thumb_url: "https://cs9.pikabu.ru/post_img/2017/04/02/8/149113711118483729.jpg",
-            title: "TestTitle3",
-            photo_width: 50,
-            photo_height: 40
-        },
-
-        {
-            type: "photo",
-            id: "4",
-            photo_url: "https://cs10.pikabu.ru/post_img/big/2018/06/08/10/1528473855169978071.jpg",
-            thumb_url: "https://cs10.pikabu.ru/post_img/big/2018/06/08/10/1528473855169978071.jpg",
-            title: "TestTitle3",
-            photo_width: 40,
-            photo_height: 70
-        }
-
-
-    ]
-
-    bot.answerInlineQuery(query.id, results, {
-        cache_time: 0
-    })
-})
-
-bot.onText(/\/key/, function(msg) {
+bot.onText(/\/key/, msg => {
     var fromId = msg.from.id;
     bot.sendMessage(fromId, 'Клавіатура', {
         reply_markup: {
@@ -138,9 +89,9 @@ bot.onText(/\/key/, function(msg) {
 
 });
 
-bot.onText(/\/c(.+)/, (msg, [source, match]) => {
-    const chatId = helpers.getChatId(msg);
-    const description = helpers.getItemDescription(source);
-
-    bot.sendMessage(chatId, description);
-})
+bot.onText(/\/location/, msg => {
+    const fromId = msg.from.id;
+    const longitude = msg.location.longitude;
+    const latitude = msg.location.latitude;
+    bot.sendLocation(fromId, longitude, latitude);
+  });
