@@ -22,7 +22,7 @@ const bot = new TelegramBot(process.env.TOKEN, options);
 bot.setWebHook(`${process.env.APP_URL}/bot${process.env.TOKEN}`);
 
 
-bot.onText(/\/curse/, msg => {
+bot.onText(/\/course/, msg => {
   const fromId = helpers.getFromId(msg);
 
   bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
