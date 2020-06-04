@@ -1,7 +1,7 @@
 module.exports = {
 
     getChatId(msg) {
-        return msg.chat.id;
+        return msg.from.id;
     },
 
 }

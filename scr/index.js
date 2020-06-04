@@ -14,7 +14,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 bot.onText(/\/curse/, msg => {
-    const fromId = helpers.getChatId(msg); 
+    const fromId = helpers.getFromId(msg); 
 
     bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
         reply_markup: {
@@ -89,3 +89,9 @@ bot.onText(/\/key/, msg => {
 
 });
 
+bot.onText(/\/location/, msg => {
+    const fromId = msg.from.id;
+    const longitude = msg.location.longitude;
+    const latitude = msg.location.latitude;
+    bot.sendLocation(fromId, longitude, latitude);
+  });
