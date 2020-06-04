@@ -1,6 +1,6 @@
 module.exports = {
 
-    getChatId(msg) {
+    getFromId(msg) {
         return msg.from.id;
     },
 
