@@ -14,7 +14,7 @@ bot.setWebHook(`${url}/bot${TOKEN}`);
 
 
 bot.onText(/\/curse/, msg => {
-    const fromId = msg.chat.id; 
+    let fromId = msg.from.id; 
 
     bot.sendMessage(fromId, 'Яка валюта вас цікавить?', {
         reply_markup: {
@@ -76,8 +76,8 @@ bot.onText(/\/key/, msg => {
                 [{
                         text: 'Location',
                         request_location: true
-                    },
-                    {
+                    }],
+                    [{
                         text: 'My phone number',
                         request_contact: true
                     }
