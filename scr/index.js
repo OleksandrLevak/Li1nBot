@@ -12,7 +12,7 @@ const options = {
 };
 
 const bot = new TelegramBot(process.env.TOKEN, options);
-bot.setWebHook(`${process.env.APP_URL}/bot${process.env.TOKEN}`);
+bot.setWebHook(`${process.env.MONGODB_URI}/bot${process.env.TOKEN}`);
 
 
 bot.onText(/\/course/, msg => {
