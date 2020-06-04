@@ -90,7 +90,7 @@ bot.onText(/\/key/, msg => {
 });
 
 bot.onText(/\/location/, msg => {
-    const fromId = msg.chat.id;
+    const fromId = msg.from.id;
     const longitude = msg.location.longitude;
     const latitude = msg.location.latitude;
     bot.sendLocation(fromId, latitude, longitude);
